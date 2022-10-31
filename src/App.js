@@ -13,8 +13,8 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route index element={<Homepage />} />
             <Route path='carts' element={<Cartpage />} />
-            <Route path='*' element={<PageNotFound />} />
           </Route>
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>
