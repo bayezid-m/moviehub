@@ -22,6 +22,8 @@ const Login = () => {
         .catch((error) => {
             console.log(error);
         });
+        setEmail(" ");
+        setPassword(" ")
     }
     console.log(userz);
     return (
@@ -31,7 +33,7 @@ const Login = () => {
                     <h1>Sign In</h1>
                     <form className='main2'>
                         <input className='input' type="email" 
-                         onChange={(e) => setEmail(e.target.value)}placeholder='email'></input>
+                         onChange={(e) => setEmail(e.target.value)} placeholder='email'></input>
                         <input className='input'
                         onChange={(e) => setPassword(e.target.value)}
                             type="password" placeholder='password'></input>
