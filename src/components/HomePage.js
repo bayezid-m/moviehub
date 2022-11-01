@@ -1,10 +1,11 @@
 import React from 'react';
-import List from './List';
-import "../App.css"
+import Main from './Main';
 const HomePage = () => {
-  return <div>
-    <List />
-  </div>;
+    return (
+        <div>
+             <Main/>
+        </div>
+    );
 };
 
 export default HomePage;
