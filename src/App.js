@@ -1,13 +1,13 @@
 import React from 'react';
-import Main from './Components/Main';
-import './Components/style.css';
-import NavBar from './Components/NavBar';
-import HomePage from './Components/HomePage';
+import Main from './components/Main';
+import './components/style.css';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthContextProvider } from './Context/AuthContext';
-import Login from './Components/Login';
-import Signup from './Components/Signup';
-import Account from './Components/Account';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Account from './components/Account';
 import { Accordion } from 'react-bootstrap';
 
 function App() {
