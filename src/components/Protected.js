@@ -6,9 +6,10 @@ import {onAuthStateChanged} from 'firebase/auth'
 const Protected = ({children}) => {
     const [user, setUser]=useState({})
 
-   onAuthStateChanged(auth, (currentUser)=>{
+    onAuthStateChanged(auth, (currentUser)=>{
     setUser(currentUser)
    })
+   
     if(!user){
         return<Navigate to ='/' />
     }

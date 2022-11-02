@@ -11,7 +11,7 @@ const NavBar = () => {
    onAuthStateChanged(auth, (currentUser)=>{
     setUser(currentUser)
    })
-
+   console.log(user?.email);
    const logout = async()=>{
     await signOut(auth);
     

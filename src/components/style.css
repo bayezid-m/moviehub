@@ -167,6 +167,13 @@ nav ul li a:focus::before{
     right: 5px;
     bottom: 5px;
 }
+.modalbody{
+    margin-left: 20px;
+    color: white;
+}
+.modalbtn{
+    margin: 10px;
+}
 @media (max-width:900px){
     .header{
         background-color: var(--secondary-color);
