@@ -7,3 +7,32 @@
     align-items: center;
     margin-bottom: 10px;
 }
+.inbutton{
+    background-color:  var(--secondary-color) ;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+.navbtn{
+    background-color:   var(--primary-color);
+    border: none;
+    height: 45px;  
+    width: 80px;
+    color:white;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.rootbtn{
+    height: 45px;  
+    width: 80px;
+    background-color:  var(--secondary-color) ;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: -350%;
+}
+.navbtn2{
+    margin-right: -15%;
+}

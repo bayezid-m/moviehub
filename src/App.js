@@ -1,14 +1,13 @@
 import React from 'react';
-import Main from './Components/Main';
-import './Components/style.css';
-import NavBar from './Components/NavBar';
-import HomePage from './Components/HomePage';
+import './components/style.css';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthContextProvider } from './Context/AuthContext';
-import Login from './Components/Login';
-import Signup from './Components/Signup';
-import Account from './Components/Account';
-import { Accordion } from 'react-bootstrap';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Account from './components/Account';
+import Protected from './components/Protected';
 
 function App() {
   return (
@@ -20,7 +19,9 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/account' element={<Account />} />
+          <Route path='/account' element={<Protected>
+            <Account />
+          </Protected>} />
          
           </Routes>
          

@@ -1,12 +1,12 @@
-import { getDefaultNormalizer } from "@testing-library/react";
-import react,{useState, useEffect} from "react";
+
+import {useState, useEffect} from "react";
 //import { useEffect } from "react/cjs/react.development";
 import Card from "./Card";
-
+import { BsCheckCircleFill  } from 'react-icons/bs';
 let API_key="&api_key=3ec1d4184268274b4a951e2126299319";
 let base_url="https://api.themoviedb.org/3";
 let url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
-let arr=["Popular","Theatre","Kids","Drama","Comedie"];
+let arr=["Popular","Kids","Drama","Comedie"];
 const Main=()=>{
     const [movieData,setData]=useState([]);
     const [url_set,setUrl]=useState(url);
@@ -18,23 +18,19 @@ const Main=()=>{
     },[url_set])
 
     const getData=(movieType)=>{
-        if(movieType=="Popular")
+        if(movieType==="Popular")
         {
             url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
         }
-        if(movieType=="Theatre")
-        {
-            url=base_url+"/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22"+API_key;
-        }
-        if(movieType=="Kids")
+        if(movieType==="Kids")
         {
             url=base_url+"/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc"+API_key;
         }
-        if(movieType=="Drama")
+        if(movieType==="Drama")
         {
             url=base_url+"/discover/movie?with_genres=18&primary_release_year=2014"+API_key;
         }
-        if(movieType=="Comedie")
+        if(movieType==="Comedie")
         {
             url=base_url+"/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc"+API_key;
         }
@@ -42,7 +38,7 @@ const Main=()=>{
 
     }
     const searchMovie=(evt)=>{
-        if(evt.key=="Enter")
+        if(evt.key==="Enter")
         {
             url=base_url+"/search/movie?api_key=db95773a7fb212ba790d71f6adac0e7e&query="+search;
             setUrl(url);
@@ -71,7 +67,7 @@ const Main=()=>{
                         className="inputText" onChange={(e)=>{setSearch(e.target.value)}} 
                         value={search} onKeyPress={searchMovie}>
                         </input>
-                        <button><i className="fas fa-search"></i></button>
+                        <button className="FiSearch"><BsCheckCircleFill /></button>
                     </div>
                 </form>
                 </div>
