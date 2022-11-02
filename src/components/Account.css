@@ -1,0 +1,27 @@
+.favlist{
+    color: white;
+}
+.mainfav{
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+.favcard{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.imgfav{
+    margin: 20px;
+}
+.carditem{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    margin: 20px;
+}
+.cross{
+    color: aliceblue;
+
+}

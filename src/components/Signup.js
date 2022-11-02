@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Page.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth } from '../Context/AuthContext';
+import {auth, db} from '../firebase';
+import {setDoc, doc} from 'firebase/firestore';
 
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -19,6 +20,9 @@ const Signup = () => {
     const submitHanlde=(e)=>{
         e.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
+        setDoc(doc(db, 'users', email),{
+            savedShows:[]
+        })
         .then((userCredential) => {
             // Signed in 
             const user = userCredential;

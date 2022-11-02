@@ -184,7 +184,14 @@ nav ul li a:focus::before{
         margin-right: 100px;
     }
 }
+.heart{
+    margin-left: 40px;
+    margin-top: 10px;
+}
 .notfound{
     font-size: 40px;
     font-weight: bold;
+}
+.favelist{
+    color: white;
 }
