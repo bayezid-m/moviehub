@@ -5,7 +5,6 @@ import {auth} from '../firebase';
 import {onAuthStateChanged, signOut} from 'firebase/auth'
 
 const NavBar = () => {
-   //console.log(auth.currenUser.email);
    const [user, setUser]=useState({})
 
    onAuthStateChanged(auth, (currentUser)=>{
@@ -22,7 +21,7 @@ const NavBar = () => {
        
         {user?.email ?
             <div className='navbtn2'>
-        <Link to='/account'> <button className='inbutton'>  Account</button></Link>
+        <Link to='/account'> <button className='inbutton'>{user?.email}</button></Link>
         <button onClick={logout} className='navbtn'>Log Out</button>    
         </div>:
         <div className='navbtn2'>

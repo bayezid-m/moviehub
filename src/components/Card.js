@@ -7,22 +7,12 @@ import { arrayUnion} from 'firebase/firestore';
 import {onAuthStateChanged} from 'firebase/auth';
 
 const Card=(item)=>{
-    //const [user, setUser]=useState({})
-    // onAuthStateChanged(auth, (currentUser)=>{
-    //     setUser(currentUser)
-    //    })
-    //  console.log(user?.email);
     let img_path="https://image.tmdb.org/t/p/w500";
    
     const [show, setShow]=useState(false);
     const [fave, setFave]=useState(false);
     const handleShow=()=>setShow(true);
     const handleClose=()=>setShow(false);
-
-//     const [saved, setSaved]=useState(false)
- 
-   
-  //  const movieID = doc(db, 'users', `${user?.email}`)
 
     const saveShow = async () => {
           setFave(!fave);

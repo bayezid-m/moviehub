@@ -18,6 +18,7 @@ const Signup = () => {
     const auth = getAuth();
     console.log(userz);
     const submitHanlde=(e)=>{
+       
         e.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
         setDoc(doc(db, 'users', email),{
@@ -25,9 +26,12 @@ const Signup = () => {
         })
         .then((userCredential) => {
             // Signed in 
+           
             const user = userCredential;
-            setUserz(user)
             navigate('/');
+            setUserz(user)
+            
+          
         })
         .catch((error) => {
            console.log(error.message);
